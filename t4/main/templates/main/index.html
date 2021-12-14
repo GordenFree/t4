@@ -9,13 +9,9 @@
         {% for bb in bbs %}
         <div>
             <h2>{{ bb.title }}</h2>
-            <p>{{}}</p>
-            <p>{{}}</p>
+            <p>{{ bb.content }}</p>
+            <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
         </div>
-        {{% endfor %}}
-    <b
-        </div>
-
+        {% endfor %}
     </body>
-
 </html>
