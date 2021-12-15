@@ -1,7 +1,8 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index
+from .views import index, by_rubric
 
 urlpatterns = [
-    path('index/', index, name='index')
+    path('<int:rubric_id>/', by_rubric),
+    path('', index, name='index')
 ]
