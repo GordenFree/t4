@@ -7,7 +7,8 @@ from .models import Bboard, Rubric
 # Create your views here.
 def index(request):
     bbs = Bboard.objects.all()
-    context = {'bbs':bbs}
+    rubrics = Rubric.objects.all()
+    context = {'bbs':bbs, 'rubrics':rubrics}
     return render(request, 'main/index.html', context)
 
 def by_rubric(request, rubric_id):
