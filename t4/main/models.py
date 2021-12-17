@@ -19,4 +19,4 @@ class Rubric(models.Model):
     class Meta:
         verbose_name_plural = 'Рубрики'
         verbose_name = 'Рубрика'
-        ordering = ['name']
+        ordering = ['name']        
