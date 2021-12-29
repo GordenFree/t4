@@ -19,18 +19,18 @@ class BboardCreateView(CreateView):
         context['rubrics'] = Rubric.objects.all()
         return context
 
-# Create your views here.
 def index(request):
     bbs = Bboard.objects.all()
     rubrics = Rubric.objects.all()
-    context = {'bbs':bbs, 'rubrics':rubrics}
+    price = Bboard.price
+    context = {'bbs':bbs, 'rubrics':rubrics, 'price':price,}
     return render(request, 'main/index.html', context)
 
 def by_rubric(request, rubric_id):
     bbs = Bboard.objects.filter(rubric=rubric_id)
     rubrics = Rubric.objects.all()
     current_rubric = Rubric.objects.get(pk=rubric_id)
-    context = {'bbs':bbs, 'rubrics':rubrics, 'current_rubric':current_rubric}
+    context = {'bbs':bbs, 'rubrics':rubrics, 'current_rubric':current_rubric, }
     return render(request, 'main/by_rubric.html', context)
 
 def about(request):

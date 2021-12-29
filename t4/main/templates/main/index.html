@@ -6,9 +6,9 @@
 <div class="alert alert-warning mt-2">
     <h2>{{ bb.title }}</h2>
     <p>{{ bb.content }}</p>
-    <p><a href="(% url 'by_rubric' bb.rubric.pk %}">
-    {{ bb.rubric.name }}</a></p>
-    <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+    <p>Стоимость: {{ bb.price }}</p>
+    <p>Рубрика: <a href="(% url 'by_rubric' bb.rubric.pk %}">{{ bb.rubric.name }}</a></p>
+    <p>Дата публикации: {{ bb.published|date:"d.m.Y H:i:s" }}</p>
 </div>
 {% endfor %}
 {% endblock %}

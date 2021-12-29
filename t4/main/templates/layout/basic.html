@@ -19,7 +19,6 @@
                     <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'index' %}">Главная</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'add' %}">Добавить обьявление</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">О нас</a>
-                    <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
                 </nav>
                 <p></p>
                 <header>
@@ -30,12 +29,11 @@
                     <a href="{% url 'by_rubric' rubric.pk %}">
                     {{ rubric.name }}</a>
                     {% endfor %}
-                </nav>
-        
+                </nav>        
                 <section>
                 {% block content %}
                 {% endblock %}
                 </section>
             </div>
-    </body>
+        </body>
 </html>
